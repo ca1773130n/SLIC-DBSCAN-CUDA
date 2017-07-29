@@ -10,10 +10,6 @@
 
 #ifndef __METALC__
 
-#ifdef COMPILE_WITH_METAL
-#include "MetalContext.h"
-#endif
-
 #include <stdlib.h>
 #include <string.h>
 
@@ -42,13 +38,6 @@ namespace ORUtils
 		/** Pointer to memory on GPU, if available. */
 		DEVICEPTR(T)* data_cuda;
 
-#ifndef __METALC__
-
-#ifdef COMPILE_WITH_METAL
-		void *data_metalBuffer;
-#endif
-
-#endif
 	public:
 		enum MemoryCopyDirection { CPU_TO_CPU, CPU_TO_CUDA, CUDA_TO_CPU, CUDA_TO_CUDA };
 
@@ -80,10 +69,6 @@ namespace ORUtils
 		}
 
 #ifndef __METALC__
-
-#ifdef COMPILE_WITH_METAL
-		inline const void *GetMetalBuffer() const { return data_metalBuffer; }
-#endif
 
 		/** Initialize an empty memory block of the given size,
 		on CPU only or GPU only or on both. CPU might also use the
@@ -183,9 +168,6 @@ namespace ORUtils
 #ifndef COMPILE_WITHOUT_CUDA
 				if (allocate_CUDA) allocType = 1;
 #endif
-#ifdef COMPILE_WITH_METAL
-				if (metalCompatible) allocType = 2;
-#endif
 				switch (allocType)
 				{
 				case 0:
@@ -197,9 +179,6 @@ namespace ORUtils
 #endif
 					break;
 				case 2:
-#ifdef COMPILE_WITH_METAL
-					allocateMetalData((void**)&data_cpu, (void**)&data_metalBuffer, dataSize * sizeof(T), true);
-#endif
 					break;
 				}
 
@@ -225,9 +204,6 @@ namespace ORUtils
 #ifndef COMPILE_WITHOUT_CUDA
 				if (isAllocated_CUDA) allocType = 1;
 #endif
-#ifdef COMPILE_WITH_METAL
-				if (isMetalCompatible) allocType = 2;
-#endif
 				switch (allocType)
 				{
 				case 0:
@@ -239,9 +215,6 @@ namespace ORUtils
 #endif
 					break;
 				case 2:
-#ifdef COMPILE_WITH_METAL
-					freeMetalData((void**)&data_cpu, (void**)&data_metalBuffer, dataSize * sizeof(T), true);
-#endif
 					break;
 				}
 
