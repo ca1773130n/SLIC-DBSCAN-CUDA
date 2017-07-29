@@ -2,6 +2,8 @@
 
 a CUDA implementation of DBSCAN clustering algorithm
 
+Demo video : https://www.youtube.com/watch?v=dB5C3oTeX3o&feature=youtu.be
+
 ## Description
 
 This project contains C++ and CUDA implementation of a paper "G-DBSCAN: A GPU Accelerated Algorithm for Density-based Clustering".
