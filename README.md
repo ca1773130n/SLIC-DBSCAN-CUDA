@@ -37,7 +37,7 @@ To run with webcam:
 
 To run with video file (e.g. mp4):
 
-  ./demo <video filename>
+  ./demo {video filename}
 
 * Only 640x480 video files are available for now
 
