@@ -1,5 +1,5 @@
 #pragma once
-#include "VSegEngine.h"
+#include <sdbscan/VSegEngine.h>
 
 namespace sdbscan {
 	class VSegEngineGPU : public VSegEngine {

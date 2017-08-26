@@ -1,5 +1,5 @@
 #pragma once
-#include "VDefines.h"
+#include <sdbscan/VDefines.h>
 
 namespace sdbscan {
 	class SPixelInfo {

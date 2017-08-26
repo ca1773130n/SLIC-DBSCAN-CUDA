@@ -1,6 +1,6 @@
 #pragma once
-#include "VDefines.h"
-#include "VSpixelInfo.h"
+#include <sdbscan/VDefines.h>
+#include <sdbscan/VSpixelInfo.h>
 
 namespace sdbscan {
 	struct VSettings {

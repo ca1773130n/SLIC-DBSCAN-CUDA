@@ -1,7 +1,7 @@
 #pragma once
-#include "VSegEngineGPU.h"
-#include "VClusterEngine.h"
-#include "VColor.h"
+#include <sdbscan/VSegEngineGPU.h>
+#include <sdbscan/VClusterEngine.h>
+#include <sdbscan/VColor.h>
 
 namespace sdbscan {
 	class VCoreEngine {

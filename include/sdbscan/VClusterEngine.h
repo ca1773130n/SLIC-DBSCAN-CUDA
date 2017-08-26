@@ -1,6 +1,6 @@
 #pragma once
 
-#include "VSpixelInfo.h"
+#include <sdbscan/VSpixelInfo.h>
 
 namespace sdbscan {
 	class VClusterEngine {

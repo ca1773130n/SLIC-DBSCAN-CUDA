@@ -40,9 +40,9 @@ set(DEMO_APP_OBJECTS
 	src/example/demo.cpp
 )
 
-cuda_add_library(slic_dbscan ${LIB_OBJECTS} OPTIONS -gencode arch=${CUDA_ARCH},code=${CUDA_ARCH})
+cuda_add_library(sdbscan ${LIB_OBJECTS} OPTIONS -gencode arch=${CUDA_ARCH},code=${CUDA_ARCH})
 
 if(BUILD_DEMO)
 add_executable(demo ${DEMO_APP_OBJECTS})
-target_link_libraries(demo slic_dbscan ${CUDA_LIBRARY} ${OpenCV_LIBS})
+target_link_libraries(demo sdbscan ${CUDA_LIBRARY} ${OpenCV_LIBS})
 endif()

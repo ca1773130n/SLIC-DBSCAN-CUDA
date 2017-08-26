@@ -1,7 +1,7 @@
 #pragma once
-#include "VDefines.h"
-#include "VSettings.h"
-#include "VSpixelInfo.h"
+#include <sdbscan/VDefines.h>
+#include <sdbscan/VSettings.h>
+#include <sdbscan/VSpixelInfo.h>
 #include <thrust/device_vector.h>
 
 namespace sdbscan {
