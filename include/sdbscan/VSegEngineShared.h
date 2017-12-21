@@ -171,7 +171,7 @@ namespace sdbscan {
 				|| idx_img[idx] != idx_img[(y - 1)*img_size.x + x]
 				|| idx_img[idx] != idx_img[(y + 1)*img_size.x + x])
 		{
-			avgcolorimg[idx] = Vector4u(0, 0, 255, 0);
+			avgcolorimg[idx] = Vector4u(0, 0, 0, 0);
 		}
 		else
 		{

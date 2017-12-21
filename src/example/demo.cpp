@@ -3,9 +3,9 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/video/video.hpp>
 
-#define CAM_WIDTH 640
-#define CAM_HEIGHT 480
-#define NUM_SPIXELS 1200
+#define CAM_WIDTH 1280
+#define CAM_HEIGHT 720
+#define NUM_SPIXELS 3600
 
 using namespace sdbscan;
 

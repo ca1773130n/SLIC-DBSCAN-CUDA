@@ -24,9 +24,9 @@ namespace sdbscan {
 		resImages->mAvgColorImg = new UChar4Image(mSettings.mImageSize, true, true);
 		resImages->mNumPixelsImg = new UChar4Image(mSettings.mImageSize, true, true);
 		resImages->mCenterImg = new UChar4Image(mSettings.mImageSize, true, true);
-		resImages->mNumSegments = mSettings.mNumSegments;
+		resImages->mNumSegments = (mSettings.mImageSize.x * mSettings.mImageSize.y / 256);
 		resImages->G = new SegGraph;
-		resImages->mSpixelSize = (int)ceil(sqrtf((mSettings.mImageSize.x * mSettings.mImageSize.y) / (float)mSettings.mNumSegments));
+		resImages->mSpixelSize = 16;
 
 		mSettings.mResImages = resImages;
 
