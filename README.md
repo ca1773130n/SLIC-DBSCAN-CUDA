@@ -23,7 +23,7 @@ Especially, G-DBSCAN is used for realtime clustering of SLIC superpixels in demo
 
   mkdir build
 
-  cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_EXAMPLE=1 -DCUDA_ARCH=compute_50
+  cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_DEMO=1 -DCUDA_ARCH=compute_50
 
   make -j8
 
